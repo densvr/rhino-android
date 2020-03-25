@@ -14,6 +14,8 @@ object ZipArchiver {
             val outputFile = File(outputPath)
             outputFile.mkdirs()
             outputFile.delete()
+            outputFile.createNewFile()
+            outputFile.setReadable(true, false)
             val zipOutputStream =
                 ZipOutputStream(BufferedOutputStream(FileOutputStream(outputPath)))
             val data = ByteArray(BUFFER_SIZE)
