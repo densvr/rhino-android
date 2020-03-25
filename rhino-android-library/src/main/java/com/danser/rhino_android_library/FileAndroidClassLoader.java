@@ -16,8 +16,12 @@
 
 package com.danser.rhino_android_library;
 
+import android.os.Build;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
 import com.android.dex.Dex;
 import dalvik.system.PathClassLoader;
 
@@ -29,6 +33,7 @@ import java.io.IOException;
  * @since 24.10.2017
  */
 @SuppressWarnings("ResultOfMethodCallIgnored")
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 class FileAndroidClassLoader extends BaseAndroidClassLoader {
     private static int instanceCounter = 0;
     private final File dexFile;
