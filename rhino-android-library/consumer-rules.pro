@@ -1,0 +1,2 @@
+-keepattributes Signature
+-dontwarn org.mozilla.javascript.**

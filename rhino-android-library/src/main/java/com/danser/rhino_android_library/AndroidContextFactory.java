@@ -55,8 +55,11 @@ public class AndroidContextFactory extends ContextFactory {
     public BaseAndroidClassLoader createClassLoader(ClassLoader parent) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return new InMemoryAndroidClassLoader(parent);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            return new FileAndroidClassLoader(parent, cacheDirectory);
+        } else {
+            return new ZipFileAndroidClassLoader(parent, cacheDirectory);
         }
-        return new FileAndroidClassLoader(parent, cacheDirectory);
     }
 
     @Override
