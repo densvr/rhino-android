@@ -55,7 +55,7 @@ internal class ZipFileAndroidClassLoader(
         val zipPath = dexFile.path + ".zip"
         try {
             dex.writeTo(dexFile)
-            ZipArchiver.makeZipArchive(zipPath, listOf(dexFile.path))
+            ZipArchiver.makeZipArchive(zipPath, mapOf(dexFile.path to "classes"))
         } catch (e: IOException) {
             e.printStackTrace()
         }
