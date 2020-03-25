@@ -1,7 +1,7 @@
 # rhino-android
 
 
-Взяв за основу [rhino-android](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjgvITP7LXoAhUl86YKHf9YAk4QFjAAegQIBRAB&url=https%3A%2F%2Fgithub.com%2FF43nd1r%2Frhino-android&usg=AOvVaw0h2tnQYM-QlkJMBJ-EtD3H), добавил 
+Взяв за основу [rhino-android](https://github.com/F43nd1r/rhino-android), добавил
 1. ZipFileAndroidClassLoader, для поддержки 4х андроидов
 2. Запуск скрипта "1" + "1" в main activity для проверки
 3. Выложил на jitpack и втянул в автору

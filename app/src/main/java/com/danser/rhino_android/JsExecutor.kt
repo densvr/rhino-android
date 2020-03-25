@@ -97,7 +97,7 @@ class JsExecutor(private val context: Context) : IJsExecutor {
         }
 
     private fun logError(th: Throwable) {
-        Log.e("JsEsecuter", th.message)
+        Log.e(JsExecutor::class.java.simpleName, th.message ?: "")
         Handler(Looper.getMainLooper()).post {
             Toast.makeText(context, th.message, Toast.LENGTH_LONG).show()
         }

@@ -11,10 +11,11 @@ object ZipArchiver {
 
     fun makeZipArchive(outputPath: String, files: Map<String, String>) {
         try {
-            val outputFile = File(outputPath)
-            outputFile.mkdirs()
-            outputFile.delete()
-            outputFile.createNewFile()
+            File(outputPath).apply {
+                mkdirs()
+                delete()
+                createNewFile()
+            }
             val zipOutputStream =
                 ZipOutputStream(BufferedOutputStream(FileOutputStream(outputPath)))
             val data = ByteArray(BUFFER_SIZE)
