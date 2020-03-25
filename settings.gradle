@@ -1,0 +1,2 @@
+include ':app', ':rhino-android-library'
+rootProject.name='rhino-android'
